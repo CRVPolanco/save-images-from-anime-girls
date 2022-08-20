@@ -1,0 +1,244 @@
+html{
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+}
+body{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root{
+
+  --c1: #C1EFFF;
+  --c2: #FFE9AE;
+  --c3: #FFDBA4;
+  --c4: #FFB3B3;
+  --c5: #2A0944;
+
+}
+
+
+header{
+  width: 100%;
+  height: 6rem;
+}
+header nav {
+  width: 100%;
+  height: 100%;
+  background-color: var(--c5);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .nav-section--left {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.nav-section--left .section-left--logo-name{
+  color: white;
+  font-size: 1.6rem;
+  padding-left: 0.4rem;
+}
+nav .nav-logo--icon{
+  width: 4rem;
+  height: 4rem;
+  padding-left: 1.5rem;
+}
+nav  .nav-icon--favorites{
+  width: 4rem;
+  height: 4rem;
+  padding-right: 1.5rem;
+}
+.cont-card{
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.see-more-button {
+  width: 100px;
+  height: 19px;
+  margin-bottom: 20px;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 1.6rem;
+  border-radius: 10px;
+  color: black;
+  border: 2.5px solid var(--c4);
+  background-color: transparent;
+  text-align: center;
+  cursor: pointer;
+  vertical-align: bottom;
+  text-decoration: none;
+}
+.main-container, .main-title{
+  width: 90%;
+  margin: 0 auto;
+}
+.main-title{
+  padding: 20px 0;
+  font-size: 2.4rem;
+}
+.subtitles {
+  margin: 0;
+  padding: 20px 0 20px 0;
+  font-size: 1.9rem;
+}
+.generic-cont-principal{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.return-back-icon--generic, .return-back-icon--favorites{
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: transparent;
+  border: none;
+  background: url('../assets/icons/back-svgrepo-com.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.card{
+  justify-self: center;
+  position: relative;
+  height: 25rem;
+  width: 100%;
+}
+.card--standar-img{
+  width: 100%;
+  height: 22.5rem;
+  border-radius: 5px;
+}
+.favorite-count{
+  padding: 0;
+  margin: 4px 0 0 0;
+  font-size: 1.6rem;
+}
+.card-icon--no-favorites, .card-icon--favorites{
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  right: 10px;
+  top: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.card-icon--no-favorites{
+  background-image: url('../assets/icons/gray-heart.svg');
+}
+.card-icon--favorites{
+  background-image: url('../assets/icons/heart-svgrepo-com.svg');
+  width: 2.7rem;
+  height: 2.7rem;
+}
+footer {
+  width: 100%;
+  height: 60px;
+  background-color: var(--c5);
+}
+.footer-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.message{
+  padding-left: 15px;
+  color: white;
+  font-size: 1.8rem;
+}
+.footer-section .social-media{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1.5rem;
+}
+.social-media--icons{
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-left: 1.5rem;
+}
+.main-container h2{
+  width: 100%;
+}
+.card-skeleton {
+  background-color: lightgray;
+
+}
+.favorites-container-return-and-subtitles{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.favorites-container-return-and-subtitles .sub4{
+  padding-left: 15px;
+}
+.generic-cont--subtitle{
+  margin-left:15px;
+}
+@media(max-width: 600px){
+  .cont-card{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media(min-width: 600px){
+  .cont-card{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card{
+    height: 35rem;
+    object-fit: contain;
+  }
+  .card--standar-img{
+    height: 30rem;
+  }
+}
+@media(min-width: 768px){
+  .cont-card{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media(min-width: 1024px){
+  .cont-card{
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .card{
+    height: 35rem;
+  }
+  .card--standar-img{
+    height: 30rem;
+  }
+  .favorite-count{
+    font-size: 1.9rem;
+  }
+}
+@media(min-width: 1366px){
+  .cont-card{
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .card{
+    width: 30rem;
+    height: 37.5rem;
+  }
+  .card--standar-img{
+    width: 100%;
+    height: 35rem;
+  }
+  .favorite-count{
+    font-size: 2.3rem;
+  }
+}
