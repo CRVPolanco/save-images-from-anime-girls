@@ -15,6 +15,7 @@ module.exports = {
     filename: './src/[contenthash].js',
     assetModuleFilename: './src/assets/images/[contenthash].[ext][query]',
   },
+  mode: 'development',
   resolve: {
     extensions: [
       '.js'
@@ -76,12 +77,10 @@ module.exports = {
       ]
     }),
   ],
-  optimization: {
-    minimize: true,
-    minimizer: [
-      new minimizerCss(),
-      new TerserPluginHtml(),
-    ]
+  devServer: {
+    static: path.join(__dirname, 'dist'),
+    compress: true,
+    historyApiFallback: true,
+    port: 3006,
   }
-
 }
